@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="custom_productVariant_list_view">
+      <field name="name">productVariant.list</field>
+      <field name="model">product.product</field>
+      <field name="inherit_id" ref="product.product_product_tree_view"/>
+      <field name="arch" type="xml">
+        <tree>
+          <field name='AmazonProduct' widget='progressbar' optional="hide"/>
+          <field name='EbayProduct' widget='progressbar' optional="hide"/>
+          <field name='LTProduct' widget='progressbar' optional="hide"/>
+          <field name='LVProduct' widget='progressbar' optional="hide"/>
+          <field name='EEProduct' widget='progressbar' optional="hide"/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

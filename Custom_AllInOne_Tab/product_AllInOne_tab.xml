@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="product_template_form_view_inherit">
+      <field name="name">product.template.form.inherit</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view" />
+      <field name="arch" type="xml">
+        <notebook position="inside">
+          <page string="Amazon">
+            <group>
+              <field name="uom_id" />
+              <field name="list_price" />
+              <field name="image_1920" widget="image" />
+              <field name="weight" />
+            </group>
+          </page>
+          <page string="Ebay">
+            <group>
+              <field name="list_price" />
+              <field name="image_1920" widget="image" />
+              <field name="allow_out_of_stock_order" string="Out of stock selling" />
+            </group>
+          </page>
+          <page string="LT">
+            <group>
+              <field name="uom_id" />
+              <field name="list_price" />
+              <field name="image_1920" widget="image" />
+              <field name="alternative_product_ids" widget="many2many_tags"
+                domain="[('sale_ok', '=', True)]" />
+            </group>
+          </page>
+          <page string="LV">
+            <group>
+              <field name="list_price" />
+              <field name="weight" />
+              <field name="volume" />
+              <field name="image_1920" widget="image" />
+              <field name="image_1920" widget="image" />
+            </group>
+          </page>
+          <page string="EE">
+            <group>
+              <field name="list_price" />
+              <field name="image_1920" widget="image" />
+              <field name="weight" />
+              <field name="volume" />
+              <field name="accessory_product_ids" widget="many2many_tags"
+                domain="[('sale_ok', '=', True)]" />
+            </group>
+          </page>
+        </notebook>
+      </field>
+    </record>
+  </data>
+</odoo>
